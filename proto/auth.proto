@@ -3,9 +3,20 @@ syntax = "proto3";
 package auth;
 
 service AuthService {
+  rpc Info (InfoRequest) returns (InfoResponse) {}
   rpc Register (RegisterRequest) returns (RegisterResponse) {}
   rpc Login (LoginRequest) returns (LoginResponse) {}
   rpc Validate (ValidateRequest) returns (ValidateResponse) {}
+}
+
+// info
+
+message InfoRequest {
+}
+
+message InfoResponse {
+  int32 status = 1;
+  repeated string data = 2;
 }
 
 // Register
