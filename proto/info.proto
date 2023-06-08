@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package info;
+
+service AuthService {
+  rpc Info (InfoRequest) returns (InfoResponse) {}
+}
+
+// info
+
+message InfoRequest {
+}
+
+message InfoResponse {
+  int32 status = 1;
+  repeated string data = 2;
+}
