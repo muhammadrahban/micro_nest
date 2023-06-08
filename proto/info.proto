@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package info;
 
-service AuthService {
+service InfoService {
   rpc Info (InfoRequest) returns (InfoResponse) {}
 }
 
