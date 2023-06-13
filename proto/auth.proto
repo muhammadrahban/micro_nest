@@ -76,7 +76,7 @@ message changePasswordResponse {
 // profile
 
 message profileRequest {
-  string currentpassword = 1;
+  
 }
 
 message profileResponse {
