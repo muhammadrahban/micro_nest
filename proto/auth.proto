@@ -64,7 +64,7 @@ message forgetPasswordResponse {
 
 message changePasswordRequest {
   string currentpassword = 1;
-  string newpassword = 1;
+  string newpassword = 2;
 }
 
 message changePasswordResponse {
