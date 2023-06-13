@@ -6,6 +6,9 @@ service AuthService {
   rpc Register (RegisterRequest) returns (RegisterResponse) {}
   rpc Login (LoginRequest) returns (LoginResponse) {}
   rpc Validate (ValidateRequest) returns (ValidateResponse) {}
+  rpc forgetPassword (forgetPasswordRequest) returns (forgetPasswordResponse) {}
+  rpc changePassword (changePasswordRequest) returns (changePasswordResponse) {}
+  rpc profile (profileRequest) returns (profileResponse) {}
 }
 
 // Register
@@ -43,4 +46,41 @@ message ValidateResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 userId = 3;
+}
+
+// forgetPassword
+
+message forgetPasswordRequest {
+  string email = 1;
+}
+
+message forgetPasswordResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string responce = 3;
+}
+
+// changePassword
+
+message changePasswordRequest {
+  string currentpassword = 1;
+  string newpassword = 1;
+}
+
+message changePasswordResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string responce = 3;
+}
+
+// profile
+
+message profileRequest {
+  string currentpassword = 1;
+}
+
+message profileResponse {
+  int32 status = 1;
+  repeated string error = 2;
+  string responce = 3;
 }
