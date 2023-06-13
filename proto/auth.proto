@@ -76,7 +76,7 @@ message changePasswordResponse {
 // profile
 
 message profileRequest {
-  
+  any userId = 1
 }
 
 message profileResponse {
